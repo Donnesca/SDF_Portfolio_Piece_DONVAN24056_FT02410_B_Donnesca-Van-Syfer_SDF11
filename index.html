@@ -1,39 +1,183 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cache Bank Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/css/leaflet.css">
-    <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
-    <link rel="stylesheet" href="./assets/css/theme.css">
-    <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <title>Cache Bank Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/css/leaflet.css"
+  />
+  <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css" />
+  <link rel="stylesheet" href="./assets/css/theme.css" />
+  <link rel="stylesheet" href="./assets/css/loopple/loopple.css" />
 </head>
 
-<body class="null">
-    <div class="container flex flex-col mx-auto">
-        <!-- Main container with navigation and header content -->
+<body class="bg-gray-100">
+  <div>
+    <div class="mx-auto bg-white">
+      <!-- Main container with navigation and header content -->
+      <div
+        class="relative flex flex-wrap items-center justify-between width-full shrink-0"
+      >
+        <div class="p-2">
+          <img
+            class="h-8"
+            src="assets/component-1/navigation/cache-bank-logo.png"
+            alt="picture of bank card and logo"
+          />
+        </div>
+        <div
+          class="hidden md:flex items-center justify-between text-black gap-12 px-2"
+        >
+          <a
+            class="text-sm font-normal text-gray-700 hover:text-gray-900"
+            href="#Product"
+            >Product</a
+          >
+          <a
+            class="text-sm font-normal text-gray-700 hover:text-gray-900"
+            href="#Features"
+            >Features</a
+          >
+          <a
+            class="text-sm font-normal text-gray-700 hover:text-gray-900"
+            href="#GetStarted"
+            >Get Started</a
+          >
+          <a
+            class="text-sm font-normal text-gray-700 hover:text-gray-900"
+            href="#Contact"
+            >Contact</a
+          >
+        </div>
+        <div class="hidden p-4 gap-5 md:flex">
+          <button class="text-sm font-normal text-gray-600 hover:text-gray-900">
+            Log In
+          </button>
+          <button
+            class="px-4 py-2 text-sm font-bold bg-green-600 rounded-xl hover:bg-pink-600"
+          >
+            Sign Up
+          </button>
+        </div>
+        <button class="p-2 md:hidden" id="mobile-menu-toggle">
+          <svg
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="h-6 w-6"
+            fill="none"
+          >
+            <g clip-path="url(#clip0_429_11066)">
+              <path
+                d="M3 6.00092H21M3 12.0009H21M3 18.0009H21"
+                stroke="#292929"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_429_11066">
+                <rect
+                  width="24"
+                  height="24"
+                  fill="white"
+                  transform="translate(0 0.000915527)"
+                />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+        <div
+          class="absolute hidden md:hidden flex md:flex flex-col items-start justify-center w-full gap-3 overflow-hidden bg-white max-h-screen top-full px-4 py-8 shadow-main"
+          id="mobile-menu"
+        >
+          <a
+            class="text-sm font-normal text-gray-700 hover:text-gray-900"
+            href="#Product"
+            >Product</a
+          >
+          <a
+            class="text-sm font-normal text-gray-700 hover:text-gray-900"
+            href="#Features"
+            >Features</a
+          >
+          <a
+            class="text-sm font-normal text-gray-700 hover:text-gray-900"
+            href="#GetStarted"
+            >Get Started</a
+          >
+          <a
+            class="text-sm font-normal text-gray-700 hover:text-gray-900"
+            href="#contact"
+            >Contact</a
+          >
+
+          <button class="text-sm font-normal text-gray-600 hover:text-gray-900">
+            Log In
+          </button>
+          <button
+            class="px-4 py-2 text-sm font-bold bg-green-600 rounded-xl hover:bg-pink-600"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
     </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
+
+    <div class="w-full" id="Product">
+      <!-- Wide full-width container for additional content -->
     </div>
-    <div class="container mx-auto">
-        <!-- Centered container for more content -->
+    <div class="container mx-auto" id="Features">
+      <!-- Centered container for more content -->
     </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
+    <div class="w-full" id="GetStarted">
+      <!-- Wide full-width container for additional content -->
     </div>
-    <div class="w-full">
-        <!-- Wide full-width container for additional content -->
+    <div class="w-full" id="Contact">
+      <!-- Wide full-width container for additional content -->
     </div>
-    <div class="w-full bg-green-500">
-        <!-- Full-width footer container with green background -->
-    </div>
-    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/maps.js"></script>
-    <script src="./assets/js/loopple/loopple.js"></script>
+  </div>
+  <div class="w-full bg-green-500">
+    <!-- Full-width footer container with green background -->
+  </div>
+  <script>
+    document
+      .getElementById("mobile-menu-toggle")
+      .addEventListener("click", function () {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/maps.js"></script>
+  <script src="./assets/js/loopple/loopple.js"></script>
 </body>
