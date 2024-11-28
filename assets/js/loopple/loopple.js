@@ -1,5 +1,5 @@
 // Alert dismissible function
-document.querySelector(
+document.querySelectorAll(
   ".loopple-alert.loopple-alert-dismissible .close"
 ).onclick = function () {
   document.querySelector(".loopple-alert").classList.add("loopple-opacity-0");
